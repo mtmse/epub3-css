@@ -13,7 +13,7 @@ Version: 1.0
     *[role=doc-pagebreak][aria-label]:lang(en):after {
     content: "page " attr(aria-label);
     }
-    *[role=doc-pagebreak][aria-label]:lang(sv):after {
+    *[role=doc-pagebreak][aria-label]:not(:lang(en)):after {
     content: "sidan " attr(aria-label);
     }
 }
