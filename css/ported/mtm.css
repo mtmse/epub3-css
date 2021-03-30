@@ -1,5 +1,19 @@
-/* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books 
+/* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books with the addition of speech announcement rules for TTS production
 
 Version: 1.0
 
-*/ 
+*/
+
+/* Visual */
+
+/* Speech announcements */
+@media speech {
+
+    /* Announcing pagebreaks with "page" and number */
+    *[role=doc-pagebreak][aria-label]:lang(en):after {
+    content: "page " attr(aria-label);
+    }
+    *[role=doc-pagebreak][aria-label]:lang(sv):after {
+    content: "sidan " attr(aria-label);
+    }
+}
