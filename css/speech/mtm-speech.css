@@ -1,0 +1,16 @@
+/* This CSS contains MTM's speech announcement rules for TTS production
+
+Version: 1.0
+
+*/
+
+@media speech {
+
+    /* Announcing pagebreaks with "page" and number */
+    *[role=doc-pagebreak][aria-label]:lang(en):after {
+    content: "page " attr(aria-label);
+    }
+    *[role=doc-pagebreak][aria-label]:not(:lang(en)):after {
+    content: "sidan " attr(aria-label);
+    }
+}
