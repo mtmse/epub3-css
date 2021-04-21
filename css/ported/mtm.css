@@ -4,8 +4,10 @@ Version: 1.0
 
 */
 
-/* --- BODY - GENERAL STYLING --- */
+/* --- NAMESPACE DECLARATIONS --- */
+@namespace epub "http://www.idpf.org/2007/ops";
 
+/* --- BODY - GENERAL STYLING --- */
 body {
     font-family: arial, helvetica, verdana, sans-serif;
     margin-left: 10%;
@@ -13,8 +15,65 @@ body {
     /* line-height/font-size spec needed? */
 }
 
-/* --- LINKS --- */
+/* --- HEADINGS --- */
+h1.title {
+   color: #000000;
+   font-size: 250%;
+   font-style: normal;
+   font-weight: bold;
+   margin-top: 5em;
+   margin-bottom: 2em;
+}
 
+h1 {
+   color: #000000;
+   font-size: 175%;
+   font-weight: bold;
+   margin-top: 3em;
+   margin-bottom: 1em;
+}
+
+h2 {
+   color: #000000;
+   font-size: 150%;
+   font-weight: normal;
+   margin-top: 2.5em;
+   margin-bottom: 1em;
+}
+
+h3 {
+   color: #000000;
+   font-size: 135%;
+   font-weight: normal;
+   margin-top: 2em;
+   margin-bottom: 1em;
+}
+
+h4 {
+   color: #000000;
+   font-size: 115%;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+}
+
+h5 {
+   color: #000000;
+   font-size: 105%;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-bottom: 0em;
+}
+
+h6, p[epub|type='bridgehead'] {
+   color: #000000;
+   font-size: 100%;
+   font-weight: bold;
+   margin-top: 0.5em;
+   margin-bottom: 0em;
+}
+
+/* --- LINKS --- */
 * a {
    color: #000000;
    text-decoration: none;
