@@ -7,6 +7,7 @@ Version: 1.0
 /* --- NAMESPACE DECLARATIONS --- */
 @namespace epub "http://www.idpf.org/2007/ops";
 
+
 /* --- BODY - GENERAL STYLING --- */
 body {
     font-family: arial, helvetica, verdana, sans-serif;
@@ -101,4 +102,20 @@ a[role=doc-noteref] {
     border-top: solid 1px #E5E5E5;
     padding-top: 2em;
     margin-top: 3em;
+}
+
+/* --- TITLEPAGE/FRONTMATTER --- */
+.docauthor, *[epub|type='z3998:author'], span.author {
+   /* span.author selector needed? */
+   font-size: 140%;
+   display: block;
+   font-family: arial, verdana, sans-serif;
+   font-weight: normal;
+   margin-top: 2em;
+}
+
+span[epub|type='subtitle'] {
+   font-size: 50%;
+   display: block;
+   margin-top: 1em;
 }
