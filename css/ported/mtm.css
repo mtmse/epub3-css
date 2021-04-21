@@ -109,7 +109,6 @@ a[role=doc-noteref] {
    /* span.author selector needed? */
    font-size: 140%;
    display: block;
-   font-family: arial, verdana, sans-serif;
    font-weight: normal;
    margin-top: 2em;
 }
