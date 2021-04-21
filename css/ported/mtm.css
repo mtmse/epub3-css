@@ -26,7 +26,7 @@ a:hover, a:active, a:focus {
 }
 
 /* --- FOOTNOTES --- */
-a[role~='doc-noteref'] {
+a[role=doc-noteref] {
    vertical-align: super;
    line-height: normal;
    font-size: smaller;
