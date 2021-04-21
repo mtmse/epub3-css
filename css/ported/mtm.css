@@ -118,3 +118,33 @@ span[epub|type='subtitle'] {
    display: block;
    margin-top: 1em;
 }
+
+/* --- BLOCKS --- */
+.text-box {
+    /* .sidebar selector removed since it's considered deprecated */
+    border: 1px solid gray;
+    background-color: #E8FBFF;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
+    /* aside.prodnote removed since it's considered deprecated */
+    border: 1px solid #A7A7A7;
+    background-color: white;
+    color: grey;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+/* making sure all child elements are also grey. selector could be optimised. */
+aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > * {
+    color: grey;
+}
+
+
