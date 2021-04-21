@@ -94,7 +94,7 @@ a[role=doc-noteref] {
 }
 
 /* --- PAGE NUMBERS --- */
-.page-normal, .page-special, .page-front {
+[epub|type='pagebreak'] {
     display: block;
     text-align: right;
     margin-right: 2em;
