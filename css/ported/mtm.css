@@ -4,4 +4,42 @@ Version: 1.0
 
 */
 
+/* --- BODY - GENERAL STYLING --- */
 
+body {
+    font-family: arial, helvetica, verdana, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* line-height/font-size spec needed? */
+}
+
+/* --- LINKS --- */
+
+* a {
+   color: #000000;
+   text-decoration: none;
+}
+a:hover, a:active, a:focus {
+   text-decoration: none;
+   color : #CC3333;
+   background-color: #FFFFCC;
+}
+
+/* --- FOOTNOTES --- */
+a[role~='doc-noteref'] {
+   vertical-align: super;
+   line-height: normal;
+   font-size: smaller;
+   border: 1px solid #FF0000;
+}
+
+/* --- PAGE NUMBERS --- */
+.page-normal, .page-special, .page-front {
+    display: block;
+    text-align: right;
+    margin-right: 2em;
+    font-weight: bold;
+    border-top: solid 1px #E5E5E5;
+    padding-top: 2em;
+    margin-top: 3em;
+}
