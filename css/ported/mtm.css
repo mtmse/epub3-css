@@ -269,4 +269,33 @@ td {
     padding: 0.5em
 }
 
+/* --- IMAGES --- */
+/* consider relocating figcaption to after img element if possible */
+figcaption { 
+    font-style: italic;
+    margin-bottom: 2em;
+}
 
+img {
+    border: none;
+}
+
+/* --- MISC INLINES --- */
+acronym, abbr {
+    border-bottom : 1px dashed rgb(255,0,0);
+}
+
+code {
+    font-family: courier, fixed, monospace;
+}
+
+/* --- VERTICAL PADDING OF CERTAIN ELEMENTS --- */
+/* could be elaborated */
+dl + dl {
+    margin-top: 1.5em;
+    padding-top: 1em;
+}
+
+ul + ul, ul + ol, ol + ul {
+    margin-top: 1.5em;
+}
