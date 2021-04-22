@@ -228,6 +228,10 @@ ul.plain, ol.plain {
    list-style-type: none;
 }
 
+ul li, ol li {
+    margin-top: 1em;
+}
+
 li p {
    margin-top: 0;
    margin-bottom: 0;
