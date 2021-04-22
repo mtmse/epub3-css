@@ -237,6 +237,10 @@ li p {
    margin-bottom: 0;
 }
 
+span.lic:last-of-type {
+    margin-left: 0.5em;
+}
+
 /* --- DEFINITION LISTS --- */
 dl {
    margin-top: 2em;
