@@ -247,3 +247,26 @@ dt {
    margin-top: 1em; 
    font-weight: bold;
 }
+
+/* --- TABLES --- */
+/* perhaps tables should have extra left margins? */
+table {
+    border: 2px solid gray;
+    padding: 1em;
+    font-size: 80%;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+th {
+    border: 1px solid gray;
+    font-weight: bold;
+    padding: 0.5em
+}
+
+td {
+    border: 1px solid gray;
+    padding: 0.5em
+}
+
+
