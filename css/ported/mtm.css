@@ -238,7 +238,7 @@ li p {
 }
 
 span.lic:last-of-type {
-    margin-left: 1em;
+    margin-left: 0.5em;
 }
 
 /* --- DEFINITION LISTS --- */
