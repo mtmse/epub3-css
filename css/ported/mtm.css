@@ -1,6 +1,6 @@
 /* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books.
 
-The EPUB CSS of SPSM also serves as a source of inspiration.
+Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 
 Version: 1.0
 
@@ -217,4 +217,29 @@ hr.separator {
 span.answer, span.answer_1 {
    background-color: #E5E5E5;
    border: 1px solid white;
+}
+
+/* --- LISTS --- */
+ol, ul {
+    margin-left: 0.5em;
+}
+
+ul.plain, ol.plain {
+   list-style-type: none;
+}
+
+li p {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+/* --- DEFINITION LISTS --- */
+dl {
+   margin-top: 2em;
+   margin-bottom: 2em;
+}
+
+dt {
+   margin-top: 1em; 
+   font-weight: bold;
 }
