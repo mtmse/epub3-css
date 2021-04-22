@@ -211,3 +211,8 @@ hr.separator {
    margin-bottom: 2em;
 }
 
+/* --- ANSWER MARKINGS --- */
+span.answer, span.answer_1 {
+   background-color: #E5E5E5;
+   border: 1px solid white;
+}
