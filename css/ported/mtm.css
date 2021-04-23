@@ -95,6 +95,10 @@ a[role=doc-noteref] {
 }
 
 /* --- PAGE NUMBERS --- */
+[epub|type='pagebreak']:empty:before {
+    content: attr(aria-label);
+}
+
 [epub|type='pagebreak'] {
     display: block;
     text-align: right;
