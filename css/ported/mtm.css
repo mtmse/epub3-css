@@ -175,7 +175,7 @@ blockquote {
 }
 
 /* --- VERSE --- */
-div.verse {
+div.verse, div.line-by-line {
     font-family: 'times new roman', serif ;
     font-weight: bold;
     margin-top: 2em;
@@ -183,7 +183,7 @@ div.verse {
     margin-left: 4em;
 }
 
-div.verse > p[epub|type='bridgehead'] {
+div.verse > p[epub|type='bridgehead'], div.line-by-line > p[epub|type='bridgehead'] {
     font-size: 110%;
 }
 
