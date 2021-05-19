@@ -2,7 +2,7 @@
 
 Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 
-Version: 1.1
+Version: 1.3
 
 */
 
@@ -73,6 +73,11 @@ h6, p[epub|type='bridgehead'] {
    font-weight: bold;
    margin-top: 0.5em;
    margin-bottom: 0em;
+}
+
+/* --- PARAGRAPHS ---*/
+p.indented {
+    text-indent: 2em;
 }
 
 /* --- LINKS --- */
