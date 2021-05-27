@@ -99,6 +99,18 @@ a[role=doc-noteref] {
    border: 1px solid #FF0000;
 }
 
+
+a[role="doc-backlink"] {
+   font-size: smaller;
+   border: 1px solid #FF0000; 
+}
+
+aside[role="doc-footnote"] {
+  border: thin #FF0000 solid;
+  padding: 1em;
+  margin: 1em;
+}
+
 /* --- PAGE NUMBERS --- */
 [epub|type='pagebreak']:empty:before {
     content: attr(aria-label);
