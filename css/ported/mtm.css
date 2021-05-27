@@ -99,6 +99,18 @@ a[role=doc-noteref] {
    border: 1px solid #FF0000;
 }
 
+
+a[role="doc-backlink"] {
+   font-size: smaller;
+   border: 1px solid #FF0000; 
+}
+
+aside[role="doc-footnote"] {
+  border: thin #FF0000 solid;
+  padding: 1em;
+  margin: 1em;
+}
+
 /* --- PAGE NUMBERS --- */
 [epub|type='pagebreak']:empty:before {
     content: attr(aria-label);
@@ -180,7 +192,7 @@ blockquote {
 }
 
 /* --- VERSE --- */
-div.verse {
+div.verse, div.line-by-line {
     font-family: 'times new roman', serif ;
     font-weight: bold;
     margin-top: 2em;
@@ -188,7 +200,7 @@ div.verse {
     margin-left: 4em;
 }
 
-div.verse > p[epub|type='bridgehead'] {
+div.verse > p[epub|type='bridgehead'], div.line-by-line > p[epub|type='bridgehead'] {
     font-size: 110%;
 }
 
