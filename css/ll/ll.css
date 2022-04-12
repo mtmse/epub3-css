@@ -1,0 +1,302 @@
+/* Customised e-book stylesheet for MTM's publishing house LL-förlaget (https://ll-forlaget.se/).
+
+Based off of MTM default CSS, version 1.4.
+
+Version: 1.0
+
+*/
+
+/* --- NAMESPACE DECLARATIONS --- */
+@namespace epub "http://www.idpf.org/2007/ops";
+
+
+/* --- BODY - GENERAL STYLING --- */
+body {
+    font-family: 'times new roman', serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 110%;
+}
+
+/* --- HEADINGS --- */
+h1.title {
+   color: #000000;
+   font-size: 250%;
+   font-style: normal;
+   font-weight: bold;
+   margin-top: 5em;
+   margin-bottom: 2em;
+}
+
+h1 {
+   color: #000000;
+   font-size: 175%;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+}
+
+h2 {
+   color: #000000;
+   font-size: 150%;
+   font-weight: normal;
+   margin-top: 2.5em;
+   margin-bottom: 1em;
+}
+
+h3 {
+   color: #000000;
+   font-size: 135%;
+   font-weight: normal;
+   margin-top: 2em;
+   margin-bottom: 1em;
+}
+
+h4 {
+   color: #000000;
+   font-size: 115%;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+}
+
+h5 {
+   color: #000000;
+   font-size: 105%;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-bottom: 0em;
+}
+
+h6, p[epub|type='bridgehead'] {
+   color: #000000;
+   font-size: 100%;
+   font-weight: bold;
+   margin-top: 0.5em;
+   margin-bottom: 0em;
+}
+
+/* --- PARAGRAPHS ---*/
+p.indented {
+    text-indent: 2em;
+}
+
+/* --- LINKS --- */
+* a {
+   color: #000000;
+   text-decoration: none;
+}
+a:hover, a:active, a:focus {
+   text-decoration: none;
+   color : #CC3333;
+   background-color: #FFFFCC;
+}
+
+/* --- FOOTNOTES --- */
+a[role=doc-noteref] {
+   vertical-align: super;
+   line-height: normal;
+   font-size: smaller;
+   border: 1px solid #FF0000;
+}
+
+
+a[role="doc-backlink"] {
+   font-size: smaller;
+   border: 1px solid #FF0000; 
+}
+
+aside[role="doc-footnote"] {
+  border: thin #FF0000 solid;
+  padding: 1em;
+  margin: 1em;
+}
+
+
+/* --- TITLEPAGE/FRONTMATTER --- */
+.docauthor, *[epub|type='z3998:author'], span.author {
+   font-size: 140%;
+   display: block;
+   font-weight: normal;
+   margin-top: 2em;
+}
+
+span[epub|type='subtitle'] {
+   font-size: 50%;
+   display: block;
+   margin-top: 1em;
+}
+
+/* --- TEXT-BOXES AND ASIDES --- */
+.text-box {
+    border: 1px solid gray;
+    background-color: #E8FBFF;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
+    border: 1px solid #A7A7A7;
+    background-color: white;
+    color: grey;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+/* making sure all child elements are also grey. selector could be optimised. */
+aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > * {
+    color: grey;
+}
+
+/* reducing initial margin-top for headings inside boxes */
+aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, aside p[epub|type='bridgehead'], .text-box h1, .text-box h2, .text-box h3, .text-box h4, .text-box h5, .text-box h6, .text-box p[epub|type='bridgehead'] {
+    margin-top: 1em;
+}
+
+/*  --- CONTEXT BREAKS --- */
+hr.emptyline {
+    width: 0px;
+    margin: 2em;
+    border: none;
+}
+hr.separator {
+    width: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* --- QUOTES --- */
+blockquote {
+   margin-bottom: 4em;
+   margin-left: 1em;
+   font-size: 90%;
+   font-style: italic;
+}
+
+/* --- VERSE --- */
+div.verse, div.line-by-line {
+    font-family: 'times new roman', serif ;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+div.verse > p[epub|type='bridgehead'], div.line-by-line > p[epub|type='bridgehead'] {
+    font-size: 110%;
+}
+
+p.verse-author {
+    margin-left: 3em;
+}
+
+span.line_indent {
+   margin-left: 1em;
+}
+span.line_longindent {
+   margin-left: 3em;
+}
+
+/*  --- CONTEXT BREAKS --- */
+hr.emptyline {
+   width: 0px;
+   margin: 2em;
+   border: none;
+}
+
+hr.separator {
+   width: 1em;
+   margin-top: 2em;
+   margin-bottom: 2em;
+}
+
+/* --- ANSWER MARKINGS --- */
+span.answer, span.answer_1 {
+   background-color: #E5E5E5;
+   border: 1px solid white;
+}
+
+/* --- LISTS --- */
+ol, ul {
+    margin-left: 0.5em;
+}
+
+ul.plain, ol.plain {
+   list-style-type: none;
+}
+
+ul li, ol li {
+    margin-top: 1em;
+}
+
+li p {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+span.lic:last-of-type {
+    margin-left: 0.5em;
+}
+
+/* --- DEFINITION LISTS --- */
+dl {
+   margin-top: 2em;
+   margin-bottom: 2em;
+}
+
+dt {
+   margin-top: 1em; 
+   font-weight: bold;
+}
+
+/* --- TABLES --- */
+table {
+    border: 2px solid gray;
+    padding: 1em;
+    font-size: 80%;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+th {
+    border: 1px solid gray;
+    font-weight: bold;
+    padding: 0.5em
+}
+
+td {
+    border: 1px solid gray;
+    padding: 0.5em
+}
+
+/* --- IMAGES --- */
+figcaption { 
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+img {
+    border: none;
+}
+
+/* --- MISC INLINES --- */
+acronym, abbr {
+    border-bottom : 1px dashed rgb(255,0,0);
+}
+
+code {
+    font-family: courier, fixed, monospace;
+}
+
+/* --- VERTICAL PADDING OF CERTAIN ELEMENTS --- */
+dl + dl {
+    margin-top: 1.5em;
+    padding-top: 1em;
+}
+
+ul + ul, ul + ol, ol + ul {
+    margin-top: 1.5em;
+}
