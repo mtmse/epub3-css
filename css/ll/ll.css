@@ -200,19 +200,6 @@ span.line_longindent {
    margin-left: 3em;
 }
 
-/*  --- CONTEXT BREAKS --- */
-hr.emptyline {
-   width: 0px;
-   margin: 2em;
-   border: none;
-}
-
-hr.separator {
-   width: 1em;
-   margin-top: 2em;
-   margin-bottom: 2em;
-}
-
 /* --- ANSWER MARKINGS --- */
 span.answer, span.answer_1 {
    background-color: #E5E5E5;
