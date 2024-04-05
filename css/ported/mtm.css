@@ -2,7 +2,7 @@
 
 Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 
-Version: 1.5
+Version: 1.8.1
 
 */
 
@@ -19,7 +19,6 @@ body {
 
 /* --- HEADINGS --- */
 h1.title {
-   color: #000000;
    font-size: 250%;
    font-style: normal;
    font-weight: bold;
@@ -28,7 +27,6 @@ h1.title {
 }
 
 h1 {
-   color: #000000;
    font-size: 175%;
    font-weight: bold;
    margin-top: 3em;
@@ -36,7 +34,6 @@ h1 {
 }
 
 h2 {
-   color: #000000;
    font-size: 150%;
    font-weight: normal;
    margin-top: 2.5em;
@@ -44,7 +41,6 @@ h2 {
 }
 
 h3 {
-   color: #000000;
    font-size: 135%;
    font-weight: normal;
    margin-top: 2em;
@@ -52,7 +48,6 @@ h3 {
 }
 
 h4 {
-   color: #000000;
    font-size: 115%;
    font-weight: bold;
    margin-top: 1em;
@@ -60,7 +55,6 @@ h4 {
 }
 
 h5 {
-   color: #000000;
    font-size: 105%;
    font-weight: bold;
    margin-top: 1em;
@@ -68,7 +62,6 @@ h5 {
 }
 
 h6, p[epub|type='bridgehead'] {
-   color: #000000;
    font-size: 100%;
    font-weight: bold;
    margin-top: 0.5em;
@@ -82,8 +75,7 @@ p.indented {
 
 /* --- LINKS --- */
 * a {
-   color: #000000;
-   text-decoration: none;
+  text-decoration: underline;
 }
 a:hover, a:active, a:focus {
    text-decoration: none;
@@ -95,13 +87,14 @@ a:hover, a:active, a:focus {
 a[role=doc-noteref] {
    vertical-align: super;
    line-height: normal;
-   font-size: smaller;
+   font-size: 75%;
    border: 1px solid #FF0000;
 }
 
 
 a[role="doc-backlink"] {
-   font-size: smaller;
+   font-size: 75%;
+   text-decoration: none;
    border: 1px solid #FF0000; 
 }
 
@@ -155,7 +148,7 @@ span[epub|type='subtitle'] {
 aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
     border: 1px solid #A7A7A7;
     background-color: white;
-    color: grey;
+    color: black;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
@@ -163,7 +156,7 @@ aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
 
 /* making sure all child elements are also grey. selector could be optimised. */
 aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > * {
-    color: grey;
+    color: black;
 }
 
 /* reducing initial margin-top for headings inside boxes */
@@ -185,8 +178,8 @@ hr.separator {
 
 /* --- QUOTES --- */
 blockquote {
-   margin-bottom: 4em;
-   margin-left: 10em;
+   margin-bottom: 2em;
+   margin-left: 3em;
    font-size: 90%;
    font-style: italic;
 }
@@ -195,13 +188,16 @@ blockquote {
 div.verse, div.line-by-line {
     font-family: 'times new roman', serif ;
     font-weight: bold;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 4em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 3em;
 }
 
 div.verse > p[epub|type='bridgehead'], div.line-by-line > p[epub|type='bridgehead'] {
     font-size: 110%;
+}
+span.linenum{
+    margin-left:0em;
 }
 
 p.verse-author {
@@ -301,4 +297,10 @@ dl + dl {
 
 ul + ul, ul + ol, ol + ul {
     margin-top: 1.5em;
+}
+
+/* emphasize the active element */
+.my-active-item {
+    background-color: yellow;
+    color: black !important;
 }
