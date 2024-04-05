@@ -1,79 +1,78 @@
-/* Customised e-book stylesheet for MTM's publishing house LL-förlaget (https://ll-forlaget.se/).
+/* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books.
 
-Based off of MTM default CSS, version 1.4.
+Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 
-Version: 1.0
+Version: 1.6-LL
 
 */
 
 /* --- NAMESPACE DECLARATIONS --- */
 @namespace epub "http://www.idpf.org/2007/ops";
 
-
 /* --- BODY - GENERAL STYLING --- */
 body {
-    font-family: 'times new roman', serif;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 110%;
+  font-family: "times new roman", serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 110%;
 }
 
 /* --- HEADINGS --- */
 h1.title {
-   color: #000000;
-   font-size: 250%;
-   font-style: normal;
-   font-weight: bold;
-   margin-top: 5em;
-   margin-bottom: 2em;
-}
 
+  font-size: 250%;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
 h1 {
-   color: #000000;
-   font-size: 175%;
-   font-weight: bold;
-   margin-top: 1em;
-   margin-bottom: 0.5em;
-}
+  font-family: "arial", sans-serif;
 
+  font-size: 175%;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
 h2 {
-   color: #000000;
-   font-size: 150%;
-   font-weight: normal;
-   margin-top: 2.5em;
-   margin-bottom: 1em;
-}
+  font-family: "arial", sans-serif;
 
+  font-size: 150%;
+  font-weight: normal;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
 h3 {
-   color: #000000;
-   font-size: 135%;
-   font-weight: normal;
-   margin-top: 2em;
-   margin-bottom: 1em;
-}
+  font-family: "arial", sans-serif;
 
+  font-size: 135%;
+  font-weight: normal;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
 h4 {
-   color: #000000;
-   font-size: 115%;
-   font-weight: bold;
-   margin-top: 1em;
-   margin-bottom: 0.5em;
-}
+  font-family: "arial", sans-serif;
 
+  font-size: 115%;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
 h5 {
-   color: #000000;
-   font-size: 105%;
-   font-weight: bold;
-   margin-top: 1em;
-   margin-bottom: 0em;
-}
+  font-family: "arial", sans-serif;
 
-h6, p[epub|type='bridgehead'] {
-   color: #000000;
-   font-size: 100%;
-   font-weight: bold;
-   margin-top: 0.5em;
-   margin-bottom: 0em;
+  font-size: 105%;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+h6, p[epub|type="bridgehead"] {
+  font-family: "arial", sans-serif;
+
+  font-size: 100%;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0;
 }
 
 /* --- PARAGRAPHS ---*/
@@ -83,8 +82,8 @@ p.indented {
 
 /* --- LINKS --- */
 * a {
-   color: #000000;
-   text-decoration: none;
+
+   text-decoration: underline;
 }
 a:hover, a:active, a:focus {
    text-decoration: none;
@@ -99,19 +98,6 @@ a[role=doc-noteref] {
    font-size: smaller;
    border: 1px solid #FF0000;
 }
-
-
-a[role="doc-backlink"] {
-   font-size: smaller;
-   border: 1px solid #FF0000; 
-}
-
-aside[role="doc-footnote"] {
-  border: thin #FF0000 solid;
-  padding: 1em;
-  margin: 1em;
-}
-
 
 /* --- TITLEPAGE/FRONTMATTER --- */
 .docauthor, *[epub|type='z3998:author'], span.author {
@@ -129,8 +115,7 @@ span[epub|type='subtitle'] {
 
 /* --- TEXT-BOXES AND ASIDES --- */
 .text-box {
-    border: 1px solid gray;
-    background-color: #E8FBFF;
+    border: 2px solid gray;
     margin-top: 1em;
     margin-bottom: 1.5em;
     padding-left: 1em;
@@ -140,9 +125,9 @@ span[epub|type='subtitle'] {
 }
 
 aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
-    border: 1px solid #A7A7A7;
+    border: 2px solid #A7A7A7;
     background-color: white;
-    color: grey;
+    color: black;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
@@ -150,7 +135,8 @@ aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
 
 /* making sure all child elements are also grey. selector could be optimised. */
 aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > * {
-    color: grey;
+    color: black;
+  
 }
 
 /* reducing initial margin-top for headings inside boxes */
@@ -158,22 +144,11 @@ aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, aside p[epub|type='b
     margin-top: 1em;
 }
 
-/*  --- CONTEXT BREAKS --- */
-hr.emptyline {
-    width: 0px;
-    margin: 2em;
-    border: none;
-}
-hr.separator {
-    width: 1em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
 
 /* --- QUOTES --- */
 blockquote {
    margin-bottom: 4em;
-   margin-left: 1em;
+   margin-left: 2em;
    font-size: 90%;
    font-style: italic;
 }
@@ -198,6 +173,19 @@ span.line_indent {
 }
 span.line_longindent {
    margin-left: 3em;
+}
+
+/*  --- CONTEXT BREAKS --- */
+hr.emptyline {
+   width: 0px;
+   margin: 2em;
+   border: none;
+}
+
+hr.separator {
+   width: 1em;
+   margin-top: 2em;
+   margin-bottom: 2em;
 }
 
 /* --- ANSWER MARKINGS --- */
@@ -262,11 +250,12 @@ td {
 /* --- IMAGES --- */
 figcaption { 
     font-style: italic;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
-
 img {
-    border: none;
+  border: none;
+  margin-left: -2em;
+  width: 90%;
 }
 
 /* --- MISC INLINES --- */
