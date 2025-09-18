@@ -1,8 +1,9 @@
 /* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books.
-
 Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
+Changes and additions inspired by Guidelines for accessible CSS 2025.
 
-Version: 1.8.1
+Version: 2.1
+2025-06-17
 
 */
 
@@ -15,6 +16,7 @@ body {
     font-family: arial, helvetica, verdana, sans-serif;
     margin-left: 10%;
     margin-right: 10%;
+    line-height: 1.4;
 }
 
 /* --- HEADINGS --- */
@@ -22,36 +24,36 @@ h1.title {
    font-size: 250%;
    font-style: normal;
    font-weight: bold;
-   margin-top: 5em;
-   margin-bottom: 2em;
+   margin-top: 4em;
+   margin-bottom: 1.5em;
 }
 
 h1 {
    font-size: 175%;
    font-weight: bold;
-   margin-top: 3em;
-   margin-bottom: 1em;
+   margin-top: 2.5em;
+   margin-bottom: 0em;
 }
 
 h2 {
    font-size: 150%;
    font-weight: normal;
-   margin-top: 2.5em;
-   margin-bottom: 1em;
+   margin-top: 2em;
+   margin-bottom: 0em;
 }
 
 h3 {
    font-size: 135%;
    font-weight: normal;
-   margin-top: 2em;
-   margin-bottom: 1em;
+   margin-top: 1.5em;
+   margin-bottom: 0.5em;
 }
 
 h4 {
    font-size: 115%;
    font-weight: bold;
    margin-top: 1em;
-   margin-bottom: 0.5em;
+   margin-bottom: 0em;
 }
 
 h5 {
@@ -64,7 +66,7 @@ h5 {
 h6, p[epub|type='bridgehead'] {
    font-size: 100%;
    font-weight: bold;
-   margin-top: 0.5em;
+   margin-top: 1em;
    margin-bottom: 0em;
 }
 
@@ -74,9 +76,10 @@ p.indented {
 }
 
 /* --- LINKS --- */
-* a {
-  text-decoration: underline;
+a {
+   text-decoration: underline;
 }
+
 a:hover, a:active, a:focus {
    text-decoration: none;
    color : #CC3333;
@@ -84,51 +87,54 @@ a:hover, a:active, a:focus {
 }
 
 /* --- FOOTNOTES --- */
-a[role=doc-noteref] {
+a[role~='doc-noteref'] {
+   font-family: arial, helvetica, verdana, sans-serif; 
    vertical-align: super;
    line-height: normal;
-   font-size: 75%;
+   font-size: 0.8rem;
    border: 1px solid #FF0000;
+   margin-left: 0.2em;
 }
 
-
-a[role="doc-backlink"] {
-   font-size: 75%;
+a[role~='doc-backlink'] {
+   font-size: 85%;
    text-decoration: none;
    border: 1px solid #FF0000; 
 }
 
-aside[role="doc-footnote"] {
+aside[role~='doc-footnote'] {
   border: thin #FF0000 solid;
   padding: 1em;
   margin: 1em;
 }
 
 /* --- PAGE NUMBERS --- */
-[epub|type='pagebreak']:empty:before {
+[epub|type='pagebreak'] {
+    font-family: arial, helvetica, verdana, sans-serif;
+    font-weight: bold; 
+    font-style: normal; 
+    display: block; 
+    text-align: right; 
+    margin-right: 2em; 
+    border-top: solid 1px #E5E5E5; 
+    padding-top: 2em; 
+    margin-top: 3em; 
+}
+
+[epub|type='pagebreak']:empty:after {
     content: attr(aria-label);
 }
 
-[epub|type='pagebreak'] {
-    display: block;
-    text-align: right;
-    margin-right: 2em;
-    font-weight: bold;
-    border-top: solid 1px #E5E5E5;
-    padding-top: 2em;
-    margin-top: 3em;
-}
-
 /* --- TITLEPAGE/FRONTMATTER --- */
-.docauthor, *[epub|type='z3998:author'], span.author {
+.docauthor, *[epub|type='z3998:author'] {
    font-size: 140%;
    display: block;
    font-weight: normal;
-   margin-top: 2em;
+   margin-top: 1.5em;
 }
 
 span[epub|type='subtitle'] {
-   font-size: 50%;
+   font-size: 60%;
    display: block;
    margin-top: 1em;
 }
@@ -145,6 +151,10 @@ span[epub|type='subtitle'] {
     padding-bottom: 0.5em;
 }
 
+aside.text-box { 
+   background-color: #F3F2F1; 
+} 
+
 aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
     border: 1px solid #A7A7A7;
     background-color: white;
@@ -154,13 +164,13 @@ aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
     padding: 1em;
 }
 
-/* making sure all child elements are also grey. selector could be optimised. */
+/* making sure all child elements are also black. Selector could be optimised. */
 aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > * {
     color: black;
 }
 
 /* reducing initial margin-top for headings inside boxes */
-aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, aside p[epub|type='bridgehead'], .text-box h1, .text-box h2, .text-box h3, .text-box h4, .text-box h5, .text-box h6, .text-box p[epub|type='bridgehead'] {
+.text-box h1, .text-box h2, .text-box h3 {
     margin-top: 1em;
 }
 
@@ -170,46 +180,82 @@ hr.emptyline {
     margin: 2em;
     border: none;
 }
+
 hr.separator {
-    width: 1em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+   margin-top: 2em;
+   margin-bottom: 1.5em;
+   text-align: center;
+   border: none;
+}
+
+hr.separator:after {
+  font-size: 130%;
+  content: '* * *';
 }
 
 /* --- QUOTES --- */
 blockquote {
-   margin-bottom: 2em;
-   margin-left: 3em;
+   margin-top: 1.5em; 
+   margin-bottom: 1.5em;
+   margin-left: 2em;
    font-size: 90%;
-   font-style: italic;
 }
 
 /* --- VERSE --- */
-div.verse, div.line-by-line {
+div.verse {
     font-family: 'times new roman', serif ;
-    font-weight: bold;
+    font-size: 105%;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     margin-left: 3em;
 }
 
-div.verse > p[epub|type='bridgehead'], div.line-by-line > p[epub|type='bridgehead'] {
+div.verse > p[epub|type='bridgehead'] {
     font-size: 110%;
 }
-span.linenum{
-    margin-left:0em;
-}
+
+/* for cases where the poem is in a blockquote */  
+blockquote div.verse { 
+  font-size: 113%;
+} 
 
 p.verse-author {
-    margin-left: 3em;
+    margin-left: 2.5em;
 }
 
+span.line { 
+   display: inline-block;  
+   text-indent: -1.2em; 
+   padding-left: 1.2em;
+} 
+
 span.line_indent {
-   margin-left: 1em;
+   display: inline-block; 
+   margin-left: 1.2em;
 }
+
 span.line_longindent {
-   margin-left: 3em;
+   display: inline-block; 
+   margin-left: 2.5em;
 }
+
+span.line span.linenum{ 
+   position: absolute; 
+   margin-left: -1.5em; 
+   font-weight: normal; 
+} 
+
+span.line_indent span.linenum{ 
+   position: absolute; 
+   margin-left: -3.9em; 
+   font-weight: normal; 
+} 
+
+span.line_longindent span.linenum{ 
+   position: absolute; 
+   margin-left: -5.2em; 
+   font-weight: normal; 
+} 
 
 /* --- ANSWER MARKINGS --- */
 span.answer, span.answer_1 {
@@ -231,13 +277,27 @@ ul li, ol li {
 }
 
 li p {
-   margin-top: 0;
+   margin-top: 0.5em;
    margin-bottom: 0;
 }
 
 span.lic:last-of-type {
-    margin-left: 0.5em;
+    margin-left: 1em;
 }
+
+ul + ul, ul + ol, ol + ul {
+    margin-top: 1.5em;
+}
+
+/* for cases where the endnotes are plain + non-plain together */ 
+ol.plain li[epub|type='endnote'], ul.plain li[epub|type='endnote'] {
+    margin-left: -1em;
+}
+
+ol.plain li[epub|type='endnote'] a[role='doc-backlink'], ul.plain li[epub|type='endnote'] a[role='doc-backlink'] {
+    margin-left: 1.1em;
+}
+
 
 /* --- DEFINITION LISTS --- */
 dl {
@@ -250,34 +310,90 @@ dt {
    font-weight: bold;
 }
 
+dl + dl {
+    margin-top: 1.5em;
+    padding-top: 1em;
+}
+
 /* --- TABLES --- */
 table {
-    border: 2px solid gray;
-    padding: 1em;
-    font-size: 80%;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
+   border: 2px solid gray;
+   padding: 1em;
+   font-size: 80%;
+   margin-top: 1.5em;
+   margin-bottom: 2em;
+   border-collapse: collapse; 
 }
 
 th {
-    border: 1px solid gray;
-    font-weight: bold;
-    padding: 0.5em
+   border: 1px solid gray;
+   font-weight: bold;
+   text-align: left; 
+   vertical-align: top; 
+   padding: 0.5em;
 }
 
 td {
-    border: 1px solid gray;
-    padding: 0.5em
+   border: 1px solid gray;
+   padding: 0.5em;
+   vertical-align: top;
 }
 
+table caption { 
+   font-size: 0.85rem; 
+   text-align: left; 
+   margin-top: 0.5em; 
+   margin-bottom: 0.5em; 
+   line-height: 1.3; 
+   font-family: "Source Sans", sans-serif; 
+} 
+
+div.table-wrapper { 
+   overflow-x: auto; 
+   overflow-y: auto; /*workaround for Calibre: add a vertical scrollbar to prevent clipping of table at page breaks*/ 
+   max-width: 100%; 
+   max-height: 100%; /*for Calibre*/ 
+} 
+
 /* --- IMAGES --- */
+figure { 
+   margin: 1.5em 0 1.5em 0em; 
+   margin-left: 0; 
+   page-break-inside: avoid; 
+} 
+
 figcaption { 
-    font-style: italic;
-    margin-bottom: 2em;
+   font-size: 0.85rem; 
+   margin-top: 0.5em; 
+   margin-bottom: 0.5em; 
+   line-height: 1.3; 
+   font-family: "Source Sans", sans-serif; 
 }
 
 img {
     border: none;
+    max-width: 100%; 
+    max-height: 80vh; /* to leave room for the caption */ 
+}
+
+figure figure {
+   padding-left: 2em; 
+}
+
+/* --- CODE --- */
+code {
+   font-family: courier, monospace;
+}
+
+pre { 
+   overflow-x: auto; 
+   white-space: pre; 
+} 
+
+/* --- MATHCAT --- */
+math[display~='block'] {
+overflow-x: auto;
+overflow-y: hidden;
 }
 
 /* --- MISC INLINES --- */
@@ -285,21 +401,11 @@ acronym, abbr {
     border-bottom : 1px dashed rgb(255,0,0);
 }
 
-code {
-    font-family: courier, fixed, monospace;
+p.invisible, span.invisible {
+  color: rgba(255,255,255,0);
 }
 
-/* --- VERTICAL PADDING OF CERTAIN ELEMENTS --- */
-dl + dl {
-    margin-top: 1.5em;
-    padding-top: 1em;
-}
-
-ul + ul, ul + ol, ol + ul {
-    margin-top: 1.5em;
-}
-
-/* emphasize the active element */
+/* --- EMPHASIZE THE ACTIVE ELEMENT --- */
 .my-active-item {
     background-color: yellow;
     color: black !important;
