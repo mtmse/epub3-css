@@ -2,8 +2,8 @@
 Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 Changes and additions inspired by Guidelines for accessible CSS 2025.
 
-Version: 2.1
-2025-06-17
+Version: 2.2
+2026-03-05
 
 */
 
@@ -143,12 +143,17 @@ span[epub|type='subtitle'] {
 .text-box {
     border: 1px solid gray;
     background-color: #E8FBFF;
+    color: black;
     margin-top: 1em;
     margin-bottom: 1.5em;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+.text-box > * {
+color: black;
 }
 
 aside.text-box { 
@@ -285,8 +290,8 @@ span.lic:last-of-type {
     margin-left: 1em;
 }
 
-ul + ul, ul + ol, ol + ul {
-    margin-top: 1.5em;
+ul + ul, ul + ol, ol + ul, ol + ol {
+    margin-top: 2em;
 }
 
 /* for cases where the endnotes are plain + non-plain together */ 
