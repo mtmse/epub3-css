@@ -3,8 +3,8 @@ Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
 Changes and additions inspired by Guidelines for accessible CSS 2025.
 LL-förlaget's variant of mtm.css
 
-Version: 2.1-LL
-2025-09-09
+Version: 2.2-LL
+2026-03-05
 
 */
 
@@ -31,7 +31,7 @@ h1.title {
 }
 
 h1 {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 175%;
    font-weight: bold;
    margin-top: 2.5em;
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 150%;
    font-weight: normal;
    margin-top: 2em;
@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 135%;
    font-weight: normal;
    margin-top: 1.5em;
@@ -55,7 +55,7 @@ h3 {
 }
 
 h4 {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 115%;
    font-weight: bold;
    margin-top: 1em;
@@ -63,7 +63,7 @@ h4 {
 }
 
 h5 {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 105%;
    font-weight: bold;
    margin-top: 1em;
@@ -71,7 +71,7 @@ h5 {
 }
 
 h6, p[epub|type='bridgehead'] {
-   font-family: "arial", sans-serif;
+   font-family: "verdana", sans-serif;
    font-size: 100%;
    font-weight: bold;
    margin-top: 1em;
@@ -159,7 +159,6 @@ span[epub|type='subtitle'] {
 /* --- TEXT-BOXES AND ASIDES --- */
 .text-box {
     border: 1px solid gray;
-    background-color: #E8FBFF;
     margin-top: 1em;
     margin-bottom: 1.5em;
     padding-left: 1em;
@@ -167,10 +166,6 @@ span[epub|type='subtitle'] {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-
-aside.text-box { 
-   background-color: #F3F2F1; 
-} 
 
 aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
     border: 1px solid #A7A7A7;
@@ -309,8 +304,8 @@ span.lic:last-of-type {
     margin-left: 1em;
 }
 
-ul + ul, ul + ol, ol + ul {
-    margin-top: 1.5em;
+ul + ul, ul + ol, ol + ul, ol + ol {
+    margin-top: 2em;
 }
 	
 ol > li::marker {
