@@ -3,8 +3,8 @@
 This CSS is an update of the legacy CSS used in MTM's DAISY talking books.
 Changes and additions inspired by existing MTM EPUB 3 CSS and Guidelines for accessible CSS 2025.
 
-Version: 2.1
-2025-06-17
+Version: 2.2
+2026-03-05
 
 */
 
@@ -139,6 +139,6 @@ pre {overflow-x: auto; white-space: pre;}
 
 /* --- VERTICAL PADDING OF CERTAIN ELEMENTS --- */
 dl + dl {margin-top: 1.5em; padding-top: 1em;}
-ul + ul, ul + ol, ol + ul {margin-top: 1.5em;}
+ul + ul, ul + ol, ol + ul, ol + ol {margin-top: 2em;}
 
 
